@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WniBus</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div>
+			<a class="logo" href="index.html">
+				<p>EPE SOGRAL spa</p>
+				<img src="images/logo.png">
+			</a>
+			<div class="phone">
+				<a href="tel:+213799667213"><span>+213 799667213</span></a>
+				<a href="tel:+213679484211"><span>+213 679484211</span></a>
+			</div>
+			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="cnx">Connexion</button>
+
+			<div id="id01" class="modal">
+  
+  				<form class="modal-content animate" action="/action_page.php" method="post">
+    			<div class="imgcontainer">
+      				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      				<img src="images/img_avatar2.png" alt="Avatar" class="avatar">
+    			</div>
+
+    			<div class="container">
+      				<label for="uname"><b>Nom d'utilisateur</b></label>
+      				<input type="text" placeholder="Enter Nom d'utilisateur" name="uname" required>
+
+      				<label for="psw"><b>mot de passe</b></label>
+      				<input type="password" placeholder="Enter le mot de passe" name="psw" required>
+        
+      				<button type="submit">connexion</button>
+      				<label>
+        			<input type="checkbox" checked="checked" name="remember"> souvenez-vous de moi
+      				</label>
+    			</div>
+
+    			<div class="container" style="background-color:#f1f1f1">
+      				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
+      				<span class="psw"> <a href="#">Mot de passe oublié?</a></span>
+    			</div>
+  				</form>
+			</div>
+
+
+			<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="cnx">S'inscrire</button>
+			<div id="id02" class="modal2">
+  				<span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+  				<form class="modal-content" action="/action_page.php">
+    			<div class="container">
+      				<h1>S'inscrire</h1>
+      				<p>Veuillez remplir ce formulaire pour créer un compte.</p>
+      				<hr>
+      				<label for="email"><b>Email</b></label>
+      				<input type="text" placeholder="Enter Email" name="email" required>
+
+      				<label for="psw"><b>mot de passe</b></label>
+      				<input type="password" placeholder="Enter le mot de passe" name="psw" required>
+
+      				<label for="psw-repeat"><b>repeter le mot de passe</b></label>
+      				<input type="password" placeholder="repeter le mot de passe" name="psw-repeat" required>
+      
+      				<label>
+        			<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">souvenez-vous de moi
+      				</label>
+
+      				<p>En créant un compte, vous acceptez nos <a href="#" style="color:dodgerblue">Conditions et confidentialité</a>.</p>
+
+      				<div class="clearfix">
+        				<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Annuler</button>
+        				<button type="submit" class="signupbtn">S'inscrire</button>
+      				</div>
+    			</div>
+  				</form>
+			</div>
+
+		</div>
+	</header>
+
+
+	<div class="what">
+		<p>Acheter des billets de bus</p>
+		<p class="gris">vers 58 wilayas</p>
+	</div>
+	<img class="bus" src="images/zez.png">
+
+	<div class="recherche">
+		<select  class="dropdown">
+    		<option value="Votre emplacement">Votre emplacement</option>
+  			<option value="Bejaia">Bejaia</option>
+  			<option value="Alger">Alger</option>
+  			<option value="Annaba">Annaba</option>
+  			<option value="Djijel">Djijel</option>
+  			<option value="Tizi ouzou">Tizi ouzou</option>
+  			<option value="khenchela">khenchela</option>
+  			<option value="Oran">Oran</option>
+		</select>
+		<select  class="dropdown">
+  			<option value="Bejaia">Bejaia</option>
+  			<option value="Alger">Alger</option>
+  			<option value="Annaba">Annaba</option>
+  			<option value="Djijel">Djijel</option>
+  			<option value="Tizi ouzou">Tizi ouzou</option>
+  			<option value="khenchela">khenchela</option>
+  			<option value="Oran">Oran</option>
+		</select>
+		<select  class="dropdown">
+  			<option value="14/01/2022">14/01/2022</option>
+  			<option value="15/01/2022">15/01/2022</option>
+  			<option value="16/01/2022">16/01/2022</option>
+  			<option value="17/01/2022">17/01/2022</option>
+  			<option value="18/01/2022">18/01/2022</option>
+  			<option value="19/01/2022">19/01/2022</option>
+  			<option value="20/01/2022">20/01/2022</option>
+		</select>
+		<input class="dropdown" type="" name="" placeholder="saisir le nombre de passagers">
+		<button class="search">chercher</button>
+	</div>
+
+	<img src="images/capture.jpg" class="cap">
+
+	<footer>
+		<p>Télécharger notre application WINBUS</p>
+		<a href=""><img src="images/google.png"></a>
+		<a href=""><img src="images/apple.png"></a>
+
+		<p>&copy;copy 2022</p>
+	</footer>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
